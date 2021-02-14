@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-8">
+      <div class="card btn btn-success" (click)="navigate()" tabindex="0">
+        <span class="">Make Card Payment</span>
+      </div>
+
+      <div class="card card-large">
+        store:
+
+        {{ creditCard$ | async | json }}
+      </div>
+    </div>
+    <div class="col-lg-2">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="view-container">
+        <toaster-container [toasterconfig]="toasterConfig"></toaster-container>
+
+        <router-outlet></router-outlet>
+
+        <div ng-view class="view-frame"></div>
+      </div>
+    </div>
+  </div>
+</div>
